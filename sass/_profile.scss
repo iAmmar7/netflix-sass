@@ -1,0 +1,113 @@
+@import "_variable.scss";
+@import "_mixins.scss";
+
+.header {
+  margin-top: 0;
+  padding: 0 3%;
+
+  img {
+    @include size(120px, 70px);
+    padding: 0;
+  }
+}
+
+.container {
+  display: flex;
+  box-pack: center;
+  align-items: center;
+  width: 100%;
+  margin: 3% auto auto;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (max-width:360px) {
+    margin-top: -10%;
+  }
+
+  .container-head {
+    h1 {
+      text-align: center;
+      font-size: 250%;
+      font-weight: 100;
+
+      @media screen and (max-width: 360px) {
+        font-size: 150%;
+      }
+    }
+  }
+
+  .profiles {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+    // &:last-child {
+    //   margin-right: 1%;
+    // }
+    // &:first-child {
+    //   margin-left: 1%;
+    // }
+    
+    .img-div {
+      display: flex;
+      flex-grow: 12;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 1vw 5vw 1vw;
+      cursor: pointer;
+
+      &:hover > img {
+        border-color: white;
+      }
+      
+      &:hover > small {
+        color: white;
+      }
+
+      img {
+        @include size(10vw, 10vw, 200px, 84px);
+        margin-bottom: 15px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-self: center;
+        border: 0.2em solid $img-border;
+
+        // @media screen(min-width: 1024px) {
+          
+        // }
+      }
+
+      small {
+        color: grey;
+        font-size: 100%;
+      }
+    }
+  }
+}
+
+.profile-button {
+
+  button {
+    display: block;
+    margin: 1.5em auto 1em auto;
+    background: transparent;
+    border: 1px solid grey;
+    padding: 0.4em 1.8%;
+    cursor: pointer;
+
+    &:hover, &:hover > a {
+      border-color: white;
+      color: white;
+    }
+
+    a {
+      color: grey;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.05cm;
+      font-size: 100%;
+    }
+  }
+}
