@@ -9,9 +9,13 @@
   overflow: hidden;
 }
 
+html {
+  height: 100%;
+}
 body { 
   background-color: $background;
   color: white;
+  height: 100%;
 }
 
 @import "_profile.scss";

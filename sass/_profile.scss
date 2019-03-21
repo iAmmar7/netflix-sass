@@ -2,8 +2,10 @@
 @import "_mixins.scss";
 
 .header {
+  position: absolute;
   margin-top: 0;
   padding: 0 3%;
+  z-index: 1;
 
   img {
     @include size(120px, 70px);
@@ -12,16 +14,18 @@
 }
 
 .container {
+  height: 100%;
   display: flex;
-  box-pack: center;
-  align-items: center;
-  width: 100%;
-  margin: 3% auto auto;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  // margin: 3% auto auto;
 
-  @media screen and (max-width:360px) {
-    margin-top: -10%;
+  @media screen and (max-width: 310px) {
+    margin-top: 3%;
+  }
+  @media screen and (max-width: 216px) {
+    margin-top: 20%;
   }
 
   .container-head {
@@ -30,8 +34,11 @@
       font-size: 250%;
       font-weight: 100;
 
-      @media screen and (max-width: 360px) {
+      @media screen and (max-width: 408px) {
         font-size: 150%;
+      }
+      @media screen and (max-width: 185px) {
+        margin-bottom: 40px;
       }
     }
   }
@@ -40,21 +47,15 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
-
-    // &:last-child {
-    //   margin-right: 1%;
-    // }
-    // &:first-child {
-    //   margin-left: 1%;
-    // }
+    padding-right: 20px;
+    padding-left: 20px;
     
     .img-div {
       display: flex;
-      flex-grow: 12;
+      flex-grow: 1;
       flex-direction: column;
       align-items: center;
-      margin: 0 1vw 5vw 1vw;
+      margin: 0 1vw 10% 1vw;
       cursor: pointer;
 
       &:hover > img {
@@ -67,47 +68,47 @@
 
       img {
         @include size(10vw, 10vw, 200px, 84px);
-        margin-bottom: 15px;
-        position: relative;
+        margin-bottom: 10px;
         background-repeat: no-repeat;
         background-size: cover;
         align-self: center;
         border: 0.2em solid $img-border;
-
-        // @media screen(min-width: 1024px) {
-          
-        // }
       }
 
       small {
         color: grey;
         font-size: 100%;
+
+        @media screen and (max-width: 600px) {
+          font-size: 80%;
+        }
       }
     }
   }
-}
 
-.profile-button {
+  .profile-button {
+    width: 100%;
+    margin-top: 10px;
+    button {
+      display: block;
+      margin: auto;
+      background: transparent;
+      border: 1px solid grey;
+      padding: 0.4em 1.8%;
+      cursor: pointer;
 
-  button {
-    display: block;
-    margin: 1.5em auto 1em auto;
-    background: transparent;
-    border: 1px solid grey;
-    padding: 0.4em 1.8%;
-    cursor: pointer;
+      &:hover, &:hover > a {
+        border-color: white;
+        color: white;
+      }
 
-    &:hover, &:hover > a {
-      border-color: white;
-      color: white;
-    }
-
-    a {
-      color: grey;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.05cm;
-      font-size: 100%;
+      a {
+        color: grey;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.05cm;
+        font-size: 100%;
+      }
     }
   }
 }
