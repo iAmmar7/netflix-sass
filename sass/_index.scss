@@ -1,0 +1,88 @@
+@import "_variable.scss";
+@import "_mixins.scss";
+
+
+.navbar {
+  @include size(100%);
+  display: flex;
+  position: fixed;
+  top: 0;
+  padding: 0 40px;
+
+  img {
+    @include size(100px, 60px);
+    cursor: pointer;
+  }
+
+  a {
+    color: $anchor;
+    text-decoration: none;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    li {
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 40px;
+
+      a {
+        transition: color 0.3s;
+        
+        &:hover {
+          color: grey;
+        }
+      }
+    }
+  }
+
+  .side-nav {
+    display: flex;
+    align-items: center;
+
+    li {
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 20px;
+
+      i {
+        cursor: pointer;
+      }
+
+      .fa-bell {
+        font-size: 1.5em;
+      }
+    }
+
+    .profile-image {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      :last-child {
+        padding-inline-start: 5px;
+      }
+
+      li {
+        img {
+          @include size(35px, 30px);
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  z-index: -1;
+  img {
+    @include size(100%, auto);
+  }
+}
+.banner-div {
+  position: absolute;
+  top: 10vw;
+}
