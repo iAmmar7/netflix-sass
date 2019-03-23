@@ -2,24 +2,24 @@
 @import "_mixins.scss";
 
 .navbar {
-  @include size(100%, 40px);
+  @include size(100%, 60px);
   display: flex;
   position: fixed;
   align-items: center;
   font-size: 1.1vw;
   z-index: 10000;
-  top: 0;
+  top: 0%;
   padding-right: 3em;
-  padding-top: 2em;
   background: -webkit-linear-gradient(90deg, transparent, rgb(20, 20, 20));
 
   @media screen and(max-width: 884px) {
-    padding-top: 0em;
+    @include size(100%, 45px);
+    overflow: hidden;
   }
 
   .logo {
-    @include size(7.5rem, auto);
-    max-height: 70px;
+    @include size(7rem, auto);
+    // max-height: 70px;
     left: 3%;
     position: relative;
     cursor: pointer;
@@ -176,10 +176,10 @@
 
   .banner-div {
     @include size(45%, auto);
-    @include position(0%, 0%, null, 4%);
+    @include position(0%, 20%, null, 4%);
     z-index: 100;
-    display: block;
     padding-top: 12vw;
+
 
     img {
       @include size(80%);
@@ -232,4 +232,9 @@
       }
     }
   }
+}
+
+
+.popular {
+  height: 503em;
 }
