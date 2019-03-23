@@ -16,6 +16,7 @@ body {
   background-color: $background;
   color: white;
   height: 100%;
+  // overflow: hidden;
 }
 
 @import "_profile.scss";

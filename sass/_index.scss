@@ -1,17 +1,26 @@
 @import "_variable.scss";
 @import "_mixins.scss";
 
-
 .navbar {
-  @include size(100%);
+  @include size(100%, 50px);
   display: flex;
   position: fixed;
+  align-items: center;
+  z-index: 10000;
   top: 0;
-  padding: 0 40px;
+  padding: 0 4%;
+  background: -webkit-linear-gradient(90deg, transparent, rgb(20, 20, 20) );
 
-  img {
-    @include size(100px, 60px);
+  @media screen and(max-width: 884px) {
+    align-items: flex-end;
+  }
+
+  > img {
+    @include size(120px, 65px);
     cursor: pointer;
+    padding-top: 0;
+    margin-top: 0;
+    margin-right: auto;
   }
 
   a {
@@ -23,19 +32,26 @@
     width: 100%;
     display: flex;
     align-items: center;
+    margin-inline-start: 10px;
+
 
     li {
       margin-inline-start: 0px;
       margin-inline-end: 0px;
-      padding-inline-start: 40px;
+      padding-inline-start: 20px;
 
       a {
         transition: color 0.3s;
+        font-size: 1.1vw;
         
         &:hover {
           color: grey;
         }
       }
+    }
+
+    @media screen and(max-width: 884px) {
+      display: none;
     }
   }
 
@@ -47,13 +63,28 @@
       margin-inline-start: 0px;
       margin-inline-end: 0px;
       padding-inline-start: 20px;
+      font-size: 100%;
 
       i {
         cursor: pointer;
       }
 
       .fa-bell {
-        font-size: 1.5em;
+        font-size: 130%;
+      }
+
+      &::nth-child(2) {
+        font-size: 1.1vw;
+      }
+      
+      @media screen and(max-width: 884px) {
+        margin-top: -55px;
+      }
+      
+      @media screen and(max-width: 950px) {
+        &:nth-child(2) {
+          display: none;
+        }
       }
     }
 
@@ -77,12 +108,70 @@
 
 .banner {
   position: relative;
-  z-index: -1;
-  img {
-    @include size(100%, auto);
+  z-index: 1;
+  
+  .banner-background {
+    img {
+      @include size(100%, auto);
+    }
   }
-}
-.banner-div {
-  position: absolute;
-  top: 10vw;
+
+  .banner-div {
+    @include size(45%, 130%);
+    position: absolute;
+    z-index: 100;
+    top: 10vw;
+    display: block;
+    padding-left: 4%;
+
+    img {
+      @include size(80%);
+    }
+
+    .banner-buttons {
+      display: flex;
+      margin-top: 2%;
+      line-height: 88%;
+
+      button {
+        position: relative;
+        // display: inline-block;
+        background: $banner-button;
+        border: none;
+        height: 3vw;
+        padding: .7em 2.3em;
+        color: #fff;
+        margin-inline-end: .8em;
+        font-size: 1.1vw;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+          background: $banner-button-hover;
+          color: #000;
+        }
+
+        i {
+          margin-right: 0.5em;
+        }
+      }
+    }
+
+    .banner-detail {
+      margin-top: 0.9em;
+      h3 {
+        text-transform: capitalize;
+        display: block;
+        font-weight: 500;
+        font-size: 1.6vw;
+        text-align: left;
+      }
+      p {
+        @include size(100%);
+        margin-top: 1vw;
+        line-height: 150%;
+        font-size: 1.4vw;
+      }
+    }
+  }
 }
