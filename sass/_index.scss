@@ -9,15 +9,13 @@
   font-size: 1.1vw;
   z-index: 10000;
   top: 0;
-  padding: 0 4%;
+  padding-right: 3em;
   background: -webkit-linear-gradient(90deg, transparent, rgb(20, 20, 20) );
 
-  @media screen and(max-width: 884px) {
-    align-items: flex-end;
-  }
-
-  > img {
-    @include size(120px, 65px);
+  .logo {
+    @include size(7rem, 65px);
+    @include position(null, null, null, 3%);
+    position: absolute;
     cursor: pointer;
     padding-top: 0;
     margin-top: 0;
@@ -30,10 +28,10 @@
   }
 
   ul {
-    width: 100%;
+    @include size(100%);
     display: flex;
     align-items: center;
-    margin-inline-start: 10px;
+    margin-inline-start: 12em;
 
 
     li {
@@ -58,6 +56,7 @@
   .side-nav {
     display: flex;
     align-items: center;
+    margin-left: auto;
 
     .kids {
       font-size: 1.1vw;
@@ -67,7 +66,7 @@
       margin-inline-start: 0px;
       margin-inline-end: 0px;
       padding-inline-start: 20px;
-      font-size: 120%;
+      font-size: 1rem;
 
       i {
         cursor: pointer;
@@ -84,8 +83,7 @@
       }
     }
 
-    .profile-image {
-      width: 100%;
+    .profile-image-div {
       display: flex;
       align-items: center;
       position: relative;
@@ -96,7 +94,7 @@
       }
 
       li {
-        img {
+        .profile-image {
           @include size(35px, 35px);
         }
       }
@@ -108,34 +106,17 @@
 
       .profile-select {
         @include size(166px);
-        background-color: $profile-select-background;
-        opacity: 0;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        right: 0%;
-        top: 110%;
-        padding: 0.4em 0.8em;
-        z-index: 100;
-        visibility: hidden;
-        transition: opacity 0.3s;
-
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: 100%;
-          right: 20%;
-          border-width: 7px;
-          border-style: solid;
-          border-color: transparent transparent #fff transparent;
-        }
+        @include profile-div(profile-select-bottom);
+        @include profile-div(profile-kids);
+        @extend %hover-div;
+        padding: 0.4em 0;
 
         li {
           display: flex;
           align-items: center;
           font-size: 13px;
           color: #fff;
-          margin-top: 0.8em;
+          margin: 0.8em;
           padding-inline-start: 0;
 
           img {
@@ -155,17 +136,24 @@
           }
         }
 
-        .profile-manage {
-          padding: 1em 0;
-        }
-
-        .profile-select-bottom {
-          border-top: 1px solid $profile-select-border;
-          padding-bottom: 0.8em;
+        .profile-kids {
+          display: none;
+          li {
+            button {
+              color: #fff;
+              padding: 1px 6px;
+              cursor: pointer;
+            }
+          }
+          @media screen and(max-width: 950px) {
+            display: flex;
+          }
         }
 
         @media screen and(max-width: 950px) {
-          right: -35%;
+          &:after {
+            right: 7%;
+          }
         }
       }
     }
@@ -184,11 +172,10 @@
 
   .banner-div {
     @include size(45%, 130%);
+    @include position(22%, null, null, 4%);
     position: absolute;
     z-index: 100;
-    top: 10vw;
     display: block;
-    padding-left: 4%;
 
     img {
       @include size(80%);

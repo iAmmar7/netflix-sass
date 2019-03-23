@@ -17,6 +17,35 @@ body {
   height: 100%;
 }
 
+.navbar .side-nav .profile-image-div .profile-select {
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 110%;
+  right: 0%;
+  z-index: 100;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.navbar .side-nav .profile-image-div .profile-select:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 20%;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
 .header {
   position: absolute;
   margin-top: 0;
@@ -170,6 +199,35 @@ body {
   font-size: 100%;
 }
 
+.navbar .side-nav .profile-image-div .profile-select {
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 110%;
+  right: 0%;
+  z-index: 100;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.navbar .side-nav .profile-image-div .profile-select:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 20%;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
 .navbar {
   width: 100%;
   height: 50px;
@@ -183,21 +241,15 @@ body {
   font-size: 1.1vw;
   z-index: 10000;
   top: 0;
-  padding: 0 4%;
+  padding-right: 3em;
   background: -webkit-linear-gradient(90deg, transparent, #141414);
 }
 
-@media screen and (max-width: 884px) {
-  .navbar {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-}
-
-.navbar > img {
-  width: 120px;
+.navbar .logo {
+  width: 7rem;
   height: 65px;
+  left: 3%;
+  position: absolute;
   cursor: pointer;
   padding-top: 0;
   margin-top: 0;
@@ -217,8 +269,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-margin-start: 10px;
-          margin-inline-start: 10px;
+  -webkit-margin-start: 12em;
+          margin-inline-start: 12em;
 }
 
 .navbar ul li {
@@ -252,6 +304,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: auto;
 }
 
 .navbar .side-nav .kids {
@@ -266,7 +319,7 @@ body {
           margin-inline-end: 0px;
   -webkit-padding-start: 20px;
           padding-inline-start: 20px;
-  font-size: 120%;
+  font-size: 1rem;
 }
 
 .navbar .side-nav li i {
@@ -283,8 +336,7 @@ body {
   }
 }
 
-.navbar .side-nav .profile-image {
-  width: 100%;
+.navbar .side-nav .profile-image-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,53 +347,35 @@ body {
   cursor: pointer;
 }
 
-.navbar .side-nav .profile-image .fa-caret-down {
+.navbar .side-nav .profile-image-div .fa-caret-down {
   -webkit-margin-start: -7px;
           margin-inline-start: -7px;
 }
 
-.navbar .side-nav .profile-image li img {
+.navbar .side-nav .profile-image-div li .profile-image {
   width: 35px;
   height: 35px;
 }
 
-.navbar .side-nav .profile-image:hover > .profile-select {
+.navbar .side-nav .profile-image-div:hover > .profile-select {
   visibility: visible;
   opacity: 1;
 }
 
-.navbar .side-nav .profile-image .profile-select {
+.navbar .side-nav .profile-image-div .profile-select {
   width: 166px;
-  background-color: rgba(0, 0, 0, 0.9);
-  opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  right: 0%;
-  top: 110%;
-  padding: 0.4em 0.8em;
-  z-index: 100;
-  visibility: hidden;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  padding: 0.4em 0;
 }
 
-.navbar .side-nav .profile-image .profile-select:after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  right: 20%;
-  border-width: 7px;
-  border-style: solid;
-  border-color: transparent transparent #fff transparent;
+.navbar .side-nav .profile-image-div .profile-select .profile-select-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.navbar .side-nav .profile-image .profile-select li {
+.navbar .side-nav .profile-image-div .profile-select .profile-kids {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.navbar .side-nav .profile-image-div .profile-select li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -350,40 +384,49 @@ body {
           align-items: center;
   font-size: 13px;
   color: #fff;
-  margin-top: 0.8em;
+  margin: 0.8em;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
 }
 
-.navbar .side-nav .profile-image .profile-select li img {
+.navbar .side-nav .profile-image-div .profile-select li img {
   width: 32px;
   height: 32px;
 }
 
-.navbar .side-nav .profile-image .profile-select li span {
+.navbar .side-nav .profile-image-div .profile-select li span {
   margin-left: 0.8em;
 }
 
-.navbar .side-nav .profile-image .profile-select li a {
+.navbar .side-nav .profile-image-div .profile-select li a {
   font-weight: 500;
 }
 
-.navbar .side-nav .profile-image .profile-select li a:hover {
+.navbar .side-nav .profile-image-div .profile-select li a:hover {
   text-decoration: underline;
 }
 
-.navbar .side-nav .profile-image .profile-select .profile-manage {
-  padding: 1em 0;
+.navbar .side-nav .profile-image-div .profile-select .profile-kids {
+  display: none;
 }
 
-.navbar .side-nav .profile-image .profile-select .profile-select-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-  padding-bottom: 0.8em;
+.navbar .side-nav .profile-image-div .profile-select .profile-kids li button {
+  color: #fff;
+  padding: 1px 6px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 950px) {
-  .navbar .side-nav .profile-image .profile-select {
-    right: -35%;
+  .navbar .side-nav .profile-image-div .profile-select .profile-kids {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .navbar .side-nav .profile-image-div .profile-select:after {
+    right: 7%;
   }
 }
 
@@ -400,11 +443,11 @@ body {
 .banner .banner-div {
   width: 45%;
   height: 130%;
+  top: 22%;
+  left: 4%;
   position: absolute;
   z-index: 100;
-  top: 10vw;
   display: block;
-  padding-left: 4%;
 }
 
 .banner .banner-div img {
