@@ -6,6 +6,7 @@
   display: flex;
   position: fixed;
   align-items: center;
+  font-size: 1.1vw;
   z-index: 10000;
   top: 0;
   padding: 0 4%;
@@ -42,7 +43,6 @@
 
       a {
         transition: color 0.3s;
-        font-size: 1.1vw;
         
         &:hover {
           color: grey;
@@ -59,11 +59,15 @@
     display: flex;
     align-items: center;
 
+    .kids {
+      font-size: 1.1vw;
+      text-transform: uppercase;
+    }
     li {
       margin-inline-start: 0px;
       margin-inline-end: 0px;
       padding-inline-start: 20px;
-      font-size: 100%;
+      font-size: 120%;
 
       i {
         cursor: pointer;
@@ -71,14 +75,6 @@
 
       .fa-bell {
         font-size: 130%;
-      }
-
-      &::nth-child(2) {
-        font-size: 1.1vw;
-      }
-      
-      @media screen and(max-width: 884px) {
-        margin-top: -55px;
       }
       
       @media screen and(max-width: 950px) {
@@ -92,14 +88,84 @@
       width: 100%;
       display: flex;
       align-items: center;
+      position: relative;
+      cursor: pointer;
 
-      :last-child {
-        padding-inline-start: 5px;
+      .fa-caret-down {
+        margin-inline-start: -7px;
       }
 
       li {
         img {
-          @include size(35px, 30px);
+          @include size(35px, 35px);
+        }
+      }
+
+      &:hover > .profile-select {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .profile-select {
+        @include size(166px);
+        background-color: $profile-select-background;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0%;
+        top: 110%;
+        padding: 0.4em 0.8em;
+        z-index: 100;
+        visibility: hidden;
+        transition: opacity 0.3s;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 100%;
+          right: 20%;
+          border-width: 7px;
+          border-style: solid;
+          border-color: transparent transparent #fff transparent;
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          font-size: 13px;
+          color: #fff;
+          margin-top: 0.8em;
+          padding-inline-start: 0;
+
+          img {
+            @include size(32px, 32px);
+          }
+
+          span {
+            margin-left: 0.8em;
+          }
+
+          a {
+            font-weight: 500;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .profile-manage {
+          padding: 1em 0;
+        }
+
+        .profile-select-bottom {
+          border-top: 1px solid $profile-select-border;
+          padding-bottom: 0.8em;
+        }
+
+        @media screen and(max-width: 950px) {
+          right: -35%;
         }
       }
     }
@@ -144,6 +210,7 @@
         margin-inline-end: .8em;
         font-size: 1.1vw;
         font-weight: 700;
+        outline: none;
         cursor: pointer;
 
         &:hover {

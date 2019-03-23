@@ -180,6 +180,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1.1vw;
   z-index: 10000;
   top: 0;
   padding: 0 4%;
@@ -232,7 +233,6 @@ body {
 .navbar ul li a {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
-  font-size: 1.1vw;
 }
 
 .navbar ul li a:hover {
@@ -254,6 +254,11 @@ body {
           align-items: center;
 }
 
+.navbar .side-nav .kids {
+  font-size: 1.1vw;
+  text-transform: uppercase;
+}
+
 .navbar .side-nav li {
   -webkit-margin-start: 0px;
           margin-inline-start: 0px;
@@ -261,7 +266,7 @@ body {
           margin-inline-end: 0px;
   -webkit-padding-start: 20px;
           padding-inline-start: 20px;
-  font-size: 100%;
+  font-size: 120%;
 }
 
 .navbar .side-nav li i {
@@ -270,16 +275,6 @@ body {
 
 .navbar .side-nav li .fa-bell {
   font-size: 130%;
-}
-
-.navbar .side-nav li::nth-child(2) {
-  font-size: 1.1vw;
-}
-
-@media screen and (max-width: 884px) {
-  .navbar .side-nav li {
-    margin-top: -55px;
-  }
 }
 
 @media screen and (max-width: 950px) {
@@ -296,16 +291,100 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  cursor: pointer;
 }
 
-.navbar .side-nav .profile-image :last-child {
-  -webkit-padding-start: 5px;
-          padding-inline-start: 5px;
+.navbar .side-nav .profile-image .fa-caret-down {
+  -webkit-margin-start: -7px;
+          margin-inline-start: -7px;
 }
 
 .navbar .side-nav .profile-image li img {
   width: 35px;
-  height: 30px;
+  height: 35px;
+}
+
+.navbar .side-nav .profile-image:hover > .profile-select {
+  visibility: visible;
+  opacity: 1;
+}
+
+.navbar .side-nav .profile-image .profile-select {
+  width: 166px;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  right: 0%;
+  top: 110%;
+  padding: 0.4em 0.8em;
+  z-index: 100;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.navbar .side-nav .profile-image .profile-select:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 20%;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.navbar .side-nav .profile-image .profile-select li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  color: #fff;
+  margin-top: 0.8em;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+.navbar .side-nav .profile-image .profile-select li img {
+  width: 32px;
+  height: 32px;
+}
+
+.navbar .side-nav .profile-image .profile-select li span {
+  margin-left: 0.8em;
+}
+
+.navbar .side-nav .profile-image .profile-select li a {
+  font-weight: 500;
+}
+
+.navbar .side-nav .profile-image .profile-select li a:hover {
+  text-decoration: underline;
+}
+
+.navbar .side-nav .profile-image .profile-select .profile-manage {
+  padding: 1em 0;
+}
+
+.navbar .side-nav .profile-image .profile-select .profile-select-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  padding-bottom: 0.8em;
+}
+
+@media screen and (max-width: 950px) {
+  .navbar .side-nav .profile-image .profile-select {
+    right: -35%;
+  }
 }
 
 .banner {
@@ -351,6 +430,7 @@ body {
           margin-inline-end: .8em;
   font-size: 1.1vw;
   font-weight: 700;
+  outline: none;
   cursor: pointer;
 }
 
