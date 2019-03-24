@@ -497,9 +497,13 @@ body {
   }
 }
 
+/*    BANNER 
+========================== */
 .banner {
   position: relative;
   z-index: 1;
+  /* Feature Movie Div 
+  =============================== */
 }
 
 .banner .banner-background img {
@@ -573,7 +577,45 @@ body {
   font-size: 1.4vw;
 }
 
+/*  Popular on Netflix
+============================== */
 .popular {
   height: 503em;
+  z-index: 10;
+  position: relative;
+  overflow: hidden;
+  margin-left: 4%;
+  margin-top: -10%;
+}
+
+.popular h2 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  padding-bottom: 0.4em;
+}
+
+.popular .popular-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popular .popular-div .movie-div {
+  margin-right: 5px;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+
+.popular .popular-div .movie-div img {
+  width: 20vw;
+  height: auto;
+}
+
+.popular .popular-div .movie-div:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  overflow: visible;
 }
 /*# sourceMappingURL=main.css.map */

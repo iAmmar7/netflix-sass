@@ -217,6 +217,9 @@
   }
 }
 
+
+/*    BANNER 
+========================== */
 .banner {
   position: relative;
   z-index: 1;
@@ -227,12 +230,13 @@
     }
   }
 
+  /* Feature Movie Div 
+  =============================== */
   .banner-div {
     @include size(45%, auto);
     @include position(0%, 20%, null, 4%);
     z-index: 100;
     padding-top: 12vw;
-
 
     img {
       @include size(80%);
@@ -245,7 +249,6 @@
 
       button {
         position: relative;
-        // display: inline-block;
         background: $banner-button;
         border: none;
         height: 3vw;
@@ -287,7 +290,36 @@
   }
 }
 
-
+/*  Popular on Netflix
+============================== */
 .popular {
   height: 503em;
+  z-index: 10;
+  position: relative;
+  overflow: hidden;
+  margin-left: 4%;
+  margin-top: -10%;
+
+  h2 {
+    font-size: 1.5vw;
+    font-weight: 500;
+    padding-bottom: 0.4em;
+  }
+  .popular-div {
+    display: flex;
+
+    .movie-div {
+      // display: inline-block;
+      // overflow: hidden;
+      margin-right: 5px;
+      transition: transform 0.2s ease-in;
+      img {
+        @include size(20vw, auto);
+      }
+      &:hover {
+        transform: scale(1.2);
+        overflow: visible;
+      }
+    }
+  }
 }
