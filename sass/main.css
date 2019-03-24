@@ -828,6 +828,7 @@ body {
   background: transparent;
   border: 1px solid grey;
   color: grey;
+  font-size: 1vw;
   margin-top: 5%;
   padding: 3%;
   cursor: pointer;
