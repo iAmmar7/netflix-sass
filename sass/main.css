@@ -829,8 +829,8 @@ body {
   border: 1px solid grey;
   color: grey;
   font-size: 1vw;
-  margin-top: 5%;
-  padding: 3%;
+  margin-top: 1vw;
+  padding: 0.5vw;
   cursor: pointer;
 }
 
