@@ -1,6 +1,8 @@
 @import "_variable.scss";
 @import "_mixins.scss";
 
+/* NAVBAR 
+============================== */
 .navbar {
   @include size(100%, 60px);
   display: flex;
@@ -17,9 +19,11 @@
     overflow: hidden;
   }
 
+  /*      Logo 
+  =========================== */
   .logo {
     @include size(7rem, auto);
-    // max-height: 70px;
+    z-index: 100;
     left: 3%;
     position: relative;
     cursor: pointer;
@@ -32,6 +36,8 @@
     text-decoration: none;
   }
 
+  /* Middle Links
+  ============================= */
   ul {
     @include size(100%);
     display: flex;
@@ -57,15 +63,60 @@
     }
   }
 
+  /* Side Links
+  ======================== */
   .side-nav {
     display: flex;
     align-items: center;
     margin-left: auto;
 
+    .search-box {
+      input {
+        width: 10px;
+        box-sizing: border-box;
+        display: inline-block;
+        color: white;
+        border: none;
+        z-index: 2147483647;
+        font-size: 1rem;
+        margin: 0;
+        background-color: transparent;
+        background-image: url('../images/search-icon.png');
+        background-position: 8px 6px;
+        background-size: 18px; 
+        background-repeat: no-repeat;
+        padding: 6px 15px;
+        cursor: pointer;
+        transition: width 0.2s ease-out;
+        overflow: hidden;
+      }
+      input:focus {
+        width: 20em;
+        z-index: 2147483647;
+        transition: width 0.5s ease-in-out;
+        background-color: $background;
+        border: 1px solid #fff;
+        cursor: initial;
+        padding: 6px 20px 6px 40px;
+        outline: none;
+      }
+
+      @media screen and (max-width:800px) {
+        input:focus {
+          width: 13.8em;
+          margin-left: -100px;
+        }
+      }
+      @media screen and (max-width:400px) {
+        display: none;
+      }
+    }
+
     .kids {
       font-size: 1.1vw;
       text-transform: uppercase;
     }
+
     li {
       margin-inline-start: 0px;
       margin-inline-end: 0px;
@@ -103,6 +154,8 @@
         }
       }
 
+      /* Profile Tooltip 
+      ============================== */
       &:hover > .profile-select {
         visibility: visible;
         opacity: 1;

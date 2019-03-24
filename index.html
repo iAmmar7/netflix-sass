@@ -5,89 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="sass/main.css">
+  <link rel="stylesheet" href="sass/normalize.css">
   <title>Netflix</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="jquery.js"></script>
 </head>
 <body>
-  <div class="navbar">
-    <img class="logo" src="images/Netflix.png" alt="Netflix Logo">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">TV Shows</a></li>
-      <li><a href="#">Movies</a></li>
-      <li><a href="#">Recently Added</a></li>
-      <li><a href="#">My List</a></li>
-    </ul>
-    <div class="side-nav">
-      <li><i class="fas fa-search"></i></li>
-      <li class="kids"><a href="#">KIDS</a></li>
-      <li><i class="fas fa-bell"></i></li>
-      <div class="profile-image-div">
-        <li><img class="profile-image" src="https://occ-0-1881-64.1.nflxso.net/art/c0c0e/af353b54475c9667ac96f986de8003b72edc0c0e.png" alt="Profile"></li>
-        <li><i class="fas fa-caret-down"></i></li>
-        
-        <div class="profile-select">          
-          <li>
-            <img src="https://occ-0-1881-64.1.nflxso.net/art/0d282/eb648e0fd0b2676dbb7317310a48f9bdc2b0d282.png" alt="Ammar">
-            <span><a>Ammar</a></span>
-          </li>
-          <li>
-            <img src="https://occ-0-1881-64.1.nflxso.net/art/38327/c6ba4ae7fa391f422edd9ee8104c75c01e038327.png" alt="John Doe">
-            <span><a>John Doe</a></span>
-          </li>
-          <li>
-            <img src="https://occ-0-1881-64.1.nflxso.net/art/c0c0e/af353b54475c9667ac96f986de8003b72edc0c0e.png" alt="Dude">
-            <span><a>Dude</a></span>
-          </li>
-          <li>
-            <img src="https://occ-0-1881-64.1.nflxso.net/art/889b9/76b56c0a3369cf9a18033de19d3af548989889b9.png" alt="Kids">
-            <span><a>Kids</a></span>
-          </li>
-          <li class="profile-manage"><a>Manage Profiles</a></li>
-          <div class="profile-kids">
-            <li><button>Kids</button></li>
-          </div>
-          <div class="profile-select-bottom">
-            <li><a href="#">Account</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Sign out of Netflix</a></li>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="header">
+    <img src="images/Netflix.png" alt="Netflix logo">
   </div>
 
-  <div class="banner">
-    <div class="banner-background">
-      <img src="https://occ-0-1917-64.1.nflxso.net/art/2eb90/025c0197d86b327ad04578175471c06e39e2eb90.webp" alt="">
+  <div class="container">
+    <div class="container-head">
+      <h1>Who's watching?</h1>
     </div>
-    <div class="banner-div">
-      <img src="https://occ-0-1917-64.1.nflxso.net/dnm/api/v5/rendition/25247fca08ea5e68662f1fd0bcbb48bf95617a4a/AAAABdu9z67m2n0mK3Qo7P-U0gbkXTcYedW-6ILC9jsApdlBO7pJOWPUB1zr-hZb5UQxI0_BRhlcLvzQxBjCMcL0umCtVt__nvOOMRIhxyNbfe2DQDZgRUWOZiXY2w9Vzz37XU37mLfcVjrHs9WaHdkH-c-LkoR_WYWWIMZkc9Rp0ZuWn_YSEatMZuHH1o5R90rVlUDR8hRbS1Po5gFzowsI-ivREY-yKic0vOhLrLFvD-1QMcr_QNLnL_V8LKhQjt1-s_piJQ.webp" title="Indian Elections" alt="Indian Elections">
-      <div class="banner-buttons">
-        <button><i class="fas fa-play"></i>Play Episode</button>
-        <button><i class="fas fa-folder-open"></i>Episodes</button>
+    <div class="profiles">
+      <div class="img-div">
+        <img src="https://occ-0-1881-64.1.nflxso.net/art/0d282/eb648e0fd0b2676dbb7317310a48f9bdc2b0d282.png" alt="Ammar">
+        <small>Ammar</small>
       </div>
-      <div class="banner-detail">
-        <h3>"Indian Elections"</h3>
-        <p>Just before voters head to the polls in India's national election, Hasan explains what's at sake for the world's largest and most diverse democracy.</p>
+      <div class="img-div">
+        <img src="https://occ-0-1881-64.1.nflxso.net/art/a7774/574ffd46d2bcef69802752f39db6320328fa7774.png" alt="Daniyal">
+        <small>Daniyal</small>
       </div>
+      <div class="img-div">
+        <img src="https://occ-0-1881-64.1.nflxso.net/art/38327/c6ba4ae7fa391f422edd9ee8104c75c01e038327.png" alt="John Doe">
+        <small>John Doe</small>
+      </div>
+      <div class="img-div">
+        <img src="https://occ-0-1881-64.1.nflxso.net/art/c0c0e/af353b54475c9667ac96f986de8003b72edc0c0e.png" alt="Dude">
+        <small>Dude</small>
+      </div>
+      <div class="img-div">
+        <img src="https://occ-0-1881-64.1.nflxso.net/art/889b9/76b56c0a3369cf9a18033de19d3af548989889b9.png" alt="Kids">
+        <small>Kids</small>
+      </div>
+    </div>
+
+    <div class="profile-button">
+      <button>
+        <a href="main.html">manage profiles</a>
+      </button>
     </div>
   </div>
-
-  <div class="popular">
-    <h2>Popular on Netflix</h2>
-    <div class="popular-div">
-
-      <div class="dehli-crime">
-        <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-1917-64.1.nflxso.net/dnm/api/v6/0DW6CdE4gYtYx8iy3aj8gs9WtXE/AAAABQnOlKG68NFp6Goo_VxKs20re60W6taV5NYewhvUqmRxHVl2jSi6SX3-fiSuh71Vw3RHH1ROkPOX8Iq4uuyV2y8jaWhPTyQy.jpg?r=036" alt="">
-      </div>
-
-    </div>
-  </div>
-
 </body>
 </html>
