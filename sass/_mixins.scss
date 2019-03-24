@@ -74,3 +74,57 @@
     }
   }
 }
+
+@mixin feature-movie($div-name, $img-size) {
+  z-index: 100;
+
+  img {
+    @include size($img-size, auto);
+  }
+
+  .#{$div-name}-buttons {
+    display: flex;
+    margin-top: 2%;
+    line-height: 88%;
+
+    button {
+      background: $banner-button;
+      position: relative;
+      border: none;
+      height: 3vw;
+      padding: .7em 2.3em;
+      color: #fff;
+      margin-inline-end: .8em;
+      font-size: 1.1vw;
+      font-weight: 700;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        background: $banner-button-hover;
+        color: #000;
+      }
+
+      i {
+        margin-right: 0.5em;
+      }
+    }
+  }
+
+  .#{$div-name}-text {
+    margin-top: 0.9em;
+    h3 {
+      text-transform: capitalize;
+      display: block;
+      font-weight: 500;
+      font-size: 1.6vw;
+      text-align: left;
+    }
+    p {
+      @include size(100%);
+      margin-top: 1vw;
+      line-height: 150%;
+      font-size: 1.4vw;
+    }
+  }
+}

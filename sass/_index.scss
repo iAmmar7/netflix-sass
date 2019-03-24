@@ -235,68 +235,76 @@
   .banner-div {
     @include size(45%, auto);
     @include position(0%, 20%, null, 4%);
-    z-index: 100;
+    @include feature-movie(banner, 80%);
     padding-top: 12vw;
-
-    img {
-      @include size(80%);
-    }
-
-    .banner-buttons {
-      display: flex;
-      margin-top: 2%;
-      line-height: 88%;
-
-      button {
-        position: relative;
-        background: $banner-button;
-        border: none;
-        height: 3vw;
-        padding: .7em 2.3em;
-        color: #fff;
-        margin-inline-end: .8em;
-        font-size: 1.1vw;
-        font-weight: 700;
-        outline: none;
-        cursor: pointer;
-
-        &:hover {
-          background: $banner-button-hover;
-          color: #000;
-        }
-
-        i {
-          margin-right: 0.5em;
-        }
-      }
-    }
-
-    .banner-detail {
-      margin-top: 0.9em;
-      h3 {
-        text-transform: capitalize;
-        display: block;
-        font-weight: 500;
-        font-size: 1.6vw;
-        text-align: left;
-      }
-      p {
-        @include size(100%);
-        margin-top: 1vw;
-        line-height: 150%;
-        font-size: 1.4vw;
-      }
-    }
   }
 }
 
 /*  Popular on Netflix
 ============================== */
-
 .movies {
   @include movies;
 }
+
+/* Trending Now 
+============================== */
 .trending {
   @include movies;
   margin-top: 2.5%;
+}
+
+
+/* Middle Video
+============================== */
+.middle-video {
+  position: relative;
+  margin-top: -2%;
+  overflow: hidden;
+
+  .middle-background {
+    position: relative;
+
+    img {
+      @include size(100%);
+      opacity: 0.08;
+    }
+  }
+
+  .middle-div {
+    @include position(20%, null, null, 4%);
+    @include size(100%, auto);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-items: space-around;
+
+    .video-div {
+      img {
+        @include size(55vw, auto);
+      }
+    }
+
+    .video-detail {
+      // @include size(80%, auto);
+      // @include position(0%, 20%, null, 4%);
+      @include feature-movie(video, 80%);
+      margin-left: 4%;
+
+      img {
+        @include size(25vw, auto);
+      }
+      
+      .video-buttons {
+        margin: 4% 0;
+      }
+
+      .video-text {
+        p {
+          @include size(70%);
+          max-width: 190vw;
+          font-size: 1.34vw;
+        }
+      }
+    }
+  }
 }

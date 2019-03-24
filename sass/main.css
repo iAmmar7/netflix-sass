@@ -524,6 +524,7 @@ body {
 
 .banner .banner-div img {
   width: 80%;
+  height: auto;
 }
 
 .banner .banner-div .banner-buttons {
@@ -535,8 +536,8 @@ body {
 }
 
 .banner .banner-div .banner-buttons button {
-  position: relative;
   background: rgba(51, 51, 51, 0.4);
+  position: relative;
   border: none;
   height: 3vw;
   padding: .7em 2.3em;
@@ -558,11 +559,11 @@ body {
   margin-right: 0.5em;
 }
 
-.banner .banner-div .banner-detail {
+.banner .banner-div .banner-text {
   margin-top: 0.9em;
 }
 
-.banner .banner-div .banner-detail h3 {
+.banner .banner-div .banner-text h3 {
   text-transform: capitalize;
   display: block;
   font-weight: 500;
@@ -570,7 +571,7 @@ body {
   text-align: left;
 }
 
-.banner .banner-div .banner-detail p {
+.banner .banner-div .banner-text p {
   width: 100%;
   margin-top: 1vw;
   line-height: 150%;
@@ -619,6 +620,8 @@ body {
   overflow: visible;
 }
 
+/* Trending Now 
+============================== */
 .trending {
   z-index: 10;
   position: relative;
@@ -658,5 +661,119 @@ body {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   overflow: visible;
+}
+
+/* Middle Video
+============================== */
+.middle-video {
+  position: relative;
+  margin-top: -2%;
+  overflow: hidden;
+}
+
+.middle-video .middle-background {
+  position: relative;
+}
+
+.middle-video .middle-background img {
+  width: 100%;
+  opacity: 0.08;
+}
+
+.middle-video .middle-div {
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: space-around;
+}
+
+.middle-video .middle-div .video-div img {
+  width: 55vw;
+  height: auto;
+}
+
+.middle-video .middle-div .video-detail {
+  z-index: 100;
+  margin-left: 4%;
+}
+
+.middle-video .middle-div .video-detail img {
+  width: 80%;
+  height: auto;
+}
+
+.middle-video .middle-div .video-detail .video-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2%;
+  line-height: 88%;
+}
+
+.middle-video .middle-div .video-detail .video-buttons button {
+  background: rgba(51, 51, 51, 0.4);
+  position: relative;
+  border: none;
+  height: 3vw;
+  padding: .7em 2.3em;
+  color: #fff;
+  -webkit-margin-end: .8em;
+          margin-inline-end: .8em;
+  font-size: 1.1vw;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+
+.middle-video .middle-div .video-detail .video-buttons button:hover {
+  background: #e6e6e6;
+  color: #000;
+}
+
+.middle-video .middle-div .video-detail .video-buttons button i {
+  margin-right: 0.5em;
+}
+
+.middle-video .middle-div .video-detail .video-text {
+  margin-top: 0.9em;
+}
+
+.middle-video .middle-div .video-detail .video-text h3 {
+  text-transform: capitalize;
+  display: block;
+  font-weight: 500;
+  font-size: 1.6vw;
+  text-align: left;
+}
+
+.middle-video .middle-div .video-detail .video-text p {
+  width: 100%;
+  margin-top: 1vw;
+  line-height: 150%;
+  font-size: 1.4vw;
+}
+
+.middle-video .middle-div .video-detail img {
+  width: 25vw;
+  height: auto;
+}
+
+.middle-video .middle-div .video-detail .video-buttons {
+  margin: 4% 0;
+}
+
+.middle-video .middle-div .video-detail .video-text p {
+  width: 70%;
+  max-width: 190vw;
+  font-size: 1.34vw;
 }
 /*# sourceMappingURL=main.css.map */
