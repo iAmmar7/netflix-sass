@@ -291,6 +291,10 @@ body {
           margin-inline-start: 4em;
 }
 
+.navbar ul :first-child a {
+  font-weight: bold;
+}
+
 .navbar ul li {
   -webkit-margin-start: 0px;
           margin-inline-start: 0px;

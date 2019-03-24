@@ -44,6 +44,12 @@
     align-items: center;
     margin-inline-start: 4em;
 
+    :first-child {
+      a {
+        font-weight: bold;
+      }
+    }
+
     li {
       margin-inline-start: 0px;
       margin-inline-end: 0px;
