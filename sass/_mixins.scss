@@ -49,6 +49,7 @@
   overflow: hidden;
   margin-left: 4%;
   margin-top: -10%;
+  padding-bottom: 3%;
 
   h2 {
     font-size: 1.5vw;
@@ -59,17 +60,21 @@
     display: flex;
 
     .movie {
-      // display: inline-block;
-      // overflow: hidden;
       cursor: pointer;
       margin-right: 5px;
-      transition: transform 0.2s ease-in;
+      transition: transform 0.3s ease-in;
+      
       img {
-        @include size(18vw, auto);
+        @include size(20vw, auto);
       }
+
       &:hover {
-        transform: scale(1.2);
-        overflow: visible;
+        transform: scale(1.4);
+      }
+
+      &:hover ~ .movie {
+        position: relative; 
+        right: -50px;
       }
     }
   }

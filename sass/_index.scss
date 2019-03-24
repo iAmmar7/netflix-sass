@@ -222,7 +222,7 @@
 ========================== */
 .banner {
   position: relative;
-  z-index: 1;
+  z-index: -1;
   
   .banner-background {    
     img {
@@ -248,9 +248,9 @@
 
 /* Trending Now 
 ============================== */
-.trending {
+.trending, .recent {
   @include movies;
-  margin-top: 2.5%;
+  margin-top: 0%;
 }
 
 
@@ -258,7 +258,7 @@
 ============================== */
 .middle-video {
   position: relative;
-  margin-top: -2%;
+  margin-top: -4%;
   overflow: hidden;
 
   .middle-background {
@@ -285,8 +285,6 @@
     }
 
     .video-detail {
-      // @include size(80%, auto);
-      // @include position(0%, 20%, null, 4%);
       @include feature-movie(video, 80%);
       margin-left: 4%;
 
@@ -306,5 +304,52 @@
         }
       }
     }
+  }
+}
+
+/* FOOTER 
+===================== */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 6% 4%;
+
+  ul {
+    width: 20%;
+    margin-top: -0.7%;
+  }
+  .list {
+    margin-top: 0%;
+  }
+  a, i {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1vw;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  button {
+    background: transparent;
+    border: 1px solid grey;
+    color: grey;
+    margin-top: 5%;
+    padding: 3%;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+  i {
+    font-size: 2.4vw;
+    padding-right: 10%;
+  }
+
+  li {
+    padding: 3% 0;
   }
 }
