@@ -224,7 +224,7 @@
   position: relative;
   z-index: 1;
   
-  .banner-background {
+  .banner-background {    
     img {
       @include size(100%, auto);
     }
@@ -292,34 +292,11 @@
 
 /*  Popular on Netflix
 ============================== */
-.popular {
-  height: 503em;
-  z-index: 10;
-  position: relative;
-  overflow: hidden;
-  margin-left: 4%;
-  margin-top: -10%;
 
-  h2 {
-    font-size: 1.5vw;
-    font-weight: 500;
-    padding-bottom: 0.4em;
-  }
-  .popular-div {
-    display: flex;
-
-    .movie-div {
-      // display: inline-block;
-      // overflow: hidden;
-      margin-right: 5px;
-      transition: transform 0.2s ease-in;
-      img {
-        @include size(20vw, auto);
-      }
-      &:hover {
-        transform: scale(1.2);
-        overflow: visible;
-      }
-    }
-  }
+.movies {
+  @include movies;
+}
+.trending {
+  @include movies;
+  margin-top: 2.5%;
 }

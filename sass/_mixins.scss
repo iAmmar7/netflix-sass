@@ -42,3 +42,35 @@
     border-top: 1px solid $profile-select-border;
   }
 }
+
+@mixin movies {
+  z-index: 10;
+  position: relative;
+  overflow: hidden;
+  margin-left: 4%;
+  margin-top: -10%;
+
+  h2 {
+    font-size: 1.5vw;
+    font-weight: 500;
+    padding-bottom: 0.4em;
+  }
+  .movie-div {
+    display: flex;
+
+    .movie {
+      // display: inline-block;
+      // overflow: hidden;
+      cursor: pointer;
+      margin-right: 5px;
+      transition: transform 0.2s ease-in;
+      img {
+        @include size(18vw, auto);
+      }
+      &:hover {
+        transform: scale(1.2);
+        overflow: visible;
+      }
+    }
+  }
+}

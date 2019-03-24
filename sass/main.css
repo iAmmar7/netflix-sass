@@ -579,8 +579,7 @@ body {
 
 /*  Popular on Netflix
 ============================== */
-.popular {
-  height: 503em;
+.movies {
   z-index: 10;
   position: relative;
   overflow: hidden;
@@ -588,19 +587,20 @@ body {
   margin-top: -10%;
 }
 
-.popular h2 {
+.movies h2 {
   font-size: 1.5vw;
   font-weight: 500;
   padding-bottom: 0.4em;
 }
 
-.popular .popular-div {
+.movies .movie-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.popular .popular-div .movie-div {
+.movies .movie-div .movie {
+  cursor: pointer;
   margin-right: 5px;
   -webkit-transition: -webkit-transform 0.2s ease-in;
   transition: -webkit-transform 0.2s ease-in;
@@ -608,12 +608,53 @@ body {
   transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
 }
 
-.popular .popular-div .movie-div img {
-  width: 20vw;
+.movies .movie-div .movie img {
+  width: 18vw;
   height: auto;
 }
 
-.popular .popular-div .movie-div:hover {
+.movies .movie-div .movie:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  overflow: visible;
+}
+
+.trending {
+  z-index: 10;
+  position: relative;
+  overflow: hidden;
+  margin-left: 4%;
+  margin-top: -10%;
+  margin-top: 2.5%;
+}
+
+.trending h2 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  padding-bottom: 0.4em;
+}
+
+.trending .movie-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trending .movie-div .movie {
+  cursor: pointer;
+  margin-right: 5px;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+
+.trending .movie-div .movie img {
+  width: 18vw;
+  height: auto;
+}
+
+.trending .movie-div .movie:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   overflow: visible;
