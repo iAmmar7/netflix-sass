@@ -16,7 +16,6 @@
 
   @media screen and(max-width: 884px) {
     @include size(100%, 45px);
-    overflow: hidden;
   }
 
   /*      Logo 
@@ -317,17 +316,20 @@
 ===================== */
 .footer {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin: 6% 4%;
 
-  ul {
-    width: 20%;
-    margin-top: -0.7%;
-  }
   .list {
-    margin-top: 0%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
+
+  ul {
+    width: 25%;
+  }
+
   a, i {
     color: grey;
     text-decoration: none;
@@ -337,6 +339,12 @@
   a:hover {
     text-decoration: underline;
   }
+  
+  i {
+    font-size: 2.4vw;
+    padding-right: 2vw;
+  }
+  
   button {
     background: transparent;
     border: 1px solid grey;
@@ -351,12 +359,8 @@
       border-color: #fff;
     }
   }
-  i {
-    font-size: 2.4vw;
-    padding-right: 10%;
-  }
 
   li {
-    padding: 3% 0;
+    padding: 0.5vw 0;
   }
 }
