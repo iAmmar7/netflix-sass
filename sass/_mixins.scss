@@ -59,9 +59,41 @@
   .movie-div {
     display: flex;
 
+    .left {
+      @include size(4vw, 11.3vw);
+      @include position(null, null, 0, null);
+      display: flex;
+      align-items: center;
+      background: rgba(0,0,0,.5);
+      visibility: hidden;
+      overflow: visible;
+      z-index: 10000;
+
+      i {
+        font-size: 3vw;
+        padding: 0 0.5vw;
+        color: #fff;
+      }
+
+      &:hover ~ .movie {
+        position: relative;
+        animation: slide-left 0.5s forwards ease-in;
+      }
+    }
+
+    .right {
+      left: 0;
+    }
+
+    &:hover {
+      .left {
+        visibility: visible;
+      }
+    }
+
     .movie {
       cursor: pointer;
-      margin-right: 5px;
+      margin-right: 0.2%;
       transition: transform 0.3s ease-in;
       
       img {
@@ -73,15 +105,48 @@
       }
 
       &:hover ~ .movie {
-        position: relative; 
-        right: -4vw;
+        position: relative;
+        animation: slide 0.3s forwards ease-in;
       }
     }
   }
 }
+@keyframes slide {
+  0% {
+    right: 0vw;
+  }
+  25% {
+    right: -1vw;
+  }
+  50% {
+    right: -2vw;
+  }
+  75% {
+    right: -3vw;
+  }
+  100% {
+    right: -4vw;
+  }
+}
+@keyframes slide-left {
+  0% {
+    left: 0vw;
+  }
+  25% {
+    left: -5vw;
+  }
+  50% {
+    left: -10vw;
+  }
+  75% {
+    left: -15vw;
+  }
+  100% {
+    left: -20vw;
+  }
+}
 
 @mixin feature-movie($div-name, $img-size) {
-  z-index: 100;
 
   img {
     @include size($img-size, auto);

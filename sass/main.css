@@ -47,6 +47,78 @@ body {
   border-color: transparent transparent #fff transparent;
 }
 
+@-webkit-keyframes slide {
+  0% {
+    right: 0vw;
+  }
+  25% {
+    right: -1vw;
+  }
+  50% {
+    right: -2vw;
+  }
+  75% {
+    right: -3vw;
+  }
+  100% {
+    right: -4vw;
+  }
+}
+
+@keyframes slide {
+  0% {
+    right: 0vw;
+  }
+  25% {
+    right: -1vw;
+  }
+  50% {
+    right: -2vw;
+  }
+  75% {
+    right: -3vw;
+  }
+  100% {
+    right: -4vw;
+  }
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    left: 0vw;
+  }
+  25% {
+    left: -5vw;
+  }
+  50% {
+    left: -10vw;
+  }
+  75% {
+    left: -15vw;
+  }
+  100% {
+    left: -20vw;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    left: 0vw;
+  }
+  25% {
+    left: -5vw;
+  }
+  50% {
+    left: -10vw;
+  }
+  75% {
+    left: -15vw;
+  }
+  100% {
+    left: -20vw;
+  }
+}
+
 .header {
   position: absolute;
   margin-top: 0;
@@ -228,6 +300,42 @@ body {
   border-width: 7px;
   border-style: solid;
   border-color: transparent transparent #fff transparent;
+}
+
+@keyframes slide {
+  0% {
+    right: 0vw;
+  }
+  25% {
+    right: -1vw;
+  }
+  50% {
+    right: -2vw;
+  }
+  75% {
+    right: -3vw;
+  }
+  100% {
+    right: -4vw;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    left: 0vw;
+  }
+  25% {
+    left: -5vw;
+  }
+  50% {
+    left: -10vw;
+  }
+  75% {
+    left: -15vw;
+  }
+  100% {
+    left: -20vw;
+  }
 }
 
 /* NAVBAR 
@@ -504,7 +612,7 @@ body {
 ========================== */
 .banner {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   /* Feature Movie Div 
   =============================== */
 }
@@ -521,7 +629,7 @@ body {
   top: 0%;
   bottom: 20%;
   left: 4%;
-  z-index: 100;
+  z-index: 10;
   padding-top: 12vw;
 }
 
@@ -604,9 +712,46 @@ body {
   display: flex;
 }
 
+.movies .movie-div .left {
+  width: 4vw;
+  height: 11.3vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  overflow: visible;
+  z-index: 10000;
+}
+
+.movies .movie-div .left i {
+  font-size: 3vw;
+  padding: 0 0.5vw;
+  color: #fff;
+}
+
+.movies .movie-div .left:hover ~ .movie {
+  position: relative;
+  -webkit-animation: slide-left 0.5s forwards ease-in;
+          animation: slide-left 0.5s forwards ease-in;
+}
+
+.movies .movie-div .right {
+  left: 0;
+}
+
+.movies .movie-div:hover .left {
+  visibility: visible;
+}
+
 .movies .movie-div .movie {
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 0.2%;
   -webkit-transition: -webkit-transform 0.3s ease-in;
   transition: -webkit-transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
@@ -625,7 +770,8 @@ body {
 
 .movies .movie-div .movie:hover ~ .movie {
   position: relative;
-  right: -4vw;
+  -webkit-animation: slide 0.3s forwards ease-in;
+          animation: slide 0.3s forwards ease-in;
 }
 
 /* Trending Now 
@@ -652,9 +798,46 @@ body {
   display: flex;
 }
 
+.trending .movie-div .left, .recent .movie-div .left {
+  width: 4vw;
+  height: 11.3vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  overflow: visible;
+  z-index: 10000;
+}
+
+.trending .movie-div .left i, .recent .movie-div .left i {
+  font-size: 3vw;
+  padding: 0 0.5vw;
+  color: #fff;
+}
+
+.trending .movie-div .left:hover ~ .movie, .recent .movie-div .left:hover ~ .movie {
+  position: relative;
+  -webkit-animation: slide-left 0.5s forwards ease-in;
+          animation: slide-left 0.5s forwards ease-in;
+}
+
+.trending .movie-div .right, .recent .movie-div .right {
+  left: 0;
+}
+
+.trending .movie-div:hover .left, .recent .movie-div:hover .left {
+  visibility: visible;
+}
+
 .trending .movie-div .movie, .recent .movie-div .movie {
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 0.2%;
   -webkit-transition: -webkit-transform 0.3s ease-in;
   transition: -webkit-transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
@@ -673,7 +856,8 @@ body {
 
 .trending .movie-div .movie:hover ~ .movie, .recent .movie-div .movie:hover ~ .movie {
   position: relative;
-  right: -4vw;
+  -webkit-animation: slide 0.3s forwards ease-in;
+          animation: slide 0.3s forwards ease-in;
 }
 
 /* Middle Video
@@ -715,7 +899,6 @@ body {
 }
 
 .middle-video .middle-div .video-detail {
-  z-index: 100;
   margin-left: 4%;
 }
 
@@ -800,7 +983,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 6% 4%;
+  margin: 6% 10%;
 }
 
 .footer .list {
