@@ -17,36 +17,6 @@ body {
   height: 100%;
 }
 
-.navbar .side-nav .profile-image-div .profile-select {
-  background-color: rgba(0, 0, 0, 0.9);
-  opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  top: 110%;
-  right: 0%;
-  z-index: 100;
-  visibility: hidden;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.navbar .side-nav .profile-image-div .profile-select:after {
-  content: "";
-  position: absolute;
-  position: absolute;
-  bottom: 100%;
-  right: 20%;
-  border-width: 7px;
-  border-style: solid;
-  border-color: transparent transparent #fff transparent;
-}
-
 @-webkit-keyframes slide {
   0% {
     right: 0vw;
@@ -117,6 +87,76 @@ body {
   100% {
     left: -20vw;
   }
+}
+
+@-webkit-keyframes image {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes image {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes video {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes video {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.navbar .side-nav .profile-image-div .profile-select {
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 110%;
+  right: 0%;
+  z-index: 100;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.navbar .side-nav .profile-image-div .profile-select:after {
+  content: "";
+  position: absolute;
+  position: absolute;
+  bottom: 100%;
+  right: 20%;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
 }
 
 .header {
@@ -272,6 +312,62 @@ body {
   font-size: 100%;
 }
 
+@keyframes slide {
+  0% {
+    right: 0vw;
+  }
+  25% {
+    right: -1vw;
+  }
+  50% {
+    right: -2vw;
+  }
+  75% {
+    right: -3vw;
+  }
+  100% {
+    right: -4vw;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    left: 0vw;
+  }
+  25% {
+    left: -5vw;
+  }
+  50% {
+    left: -10vw;
+  }
+  75% {
+    left: -15vw;
+  }
+  100% {
+    left: -20vw;
+  }
+}
+
+@keyframes image {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes video {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .navbar .side-nav .profile-image-div .profile-select {
   background-color: rgba(0, 0, 0, 0.9);
   opacity: 0;
@@ -335,6 +431,26 @@ body {
   }
   100% {
     left: -20vw;
+  }
+}
+
+@keyframes image {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes video {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -617,7 +733,7 @@ body {
   =============================== */
 }
 
-.banner .banner-background img {
+.banner .banner-background img, .banner .banner-background video {
   width: 100%;
   height: auto;
 }
@@ -864,7 +980,7 @@ body {
 ============================== */
 .middle-video {
   position: relative;
-  margin-top: -4%;
+  top: -10%;
   overflow: hidden;
 }
 
@@ -893,9 +1009,22 @@ body {
   justify-items: space-around;
 }
 
-.middle-video .middle-div .video-div img {
+.middle-video .middle-div .video-div img, .middle-video .middle-div .video-div video {
   width: 55vw;
   height: auto;
+}
+
+.middle-video .middle-div .video-div img {
+  -webkit-animation: image 5s ease-in forwards;
+          animation: image 5s ease-in forwards;
+}
+
+.middle-video .middle-div .video-div video {
+  position: absolute;
+  top: 0%;
+  opacity: 0;
+  -webkit-animation: video 5s ease-in forwards;
+          animation: video 5s ease-in forwards;
 }
 
 .middle-video .middle-div .video-detail {

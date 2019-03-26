@@ -1,4 +1,5 @@
 @import "_variable.scss";
+@import "_animation.scss";
 
 @mixin size($width, $height: null, $max: null, $min: null) {
   width: $width;
@@ -109,40 +110,6 @@
         animation: slide 0.3s forwards ease-in;
       }
     }
-  }
-}
-@keyframes slide {
-  0% {
-    right: 0vw;
-  }
-  25% {
-    right: -1vw;
-  }
-  50% {
-    right: -2vw;
-  }
-  75% {
-    right: -3vw;
-  }
-  100% {
-    right: -4vw;
-  }
-}
-@keyframes slide-left {
-  0% {
-    left: 0vw;
-  }
-  25% {
-    left: -5vw;
-  }
-  50% {
-    left: -10vw;
-  }
-  75% {
-    left: -15vw;
-  }
-  100% {
-    left: -20vw;
   }
 }
 
