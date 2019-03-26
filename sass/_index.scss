@@ -6,7 +6,7 @@
 /* NAVBAR 
 ============================== */
 .navbar {
-  @include size(100%, 60px);
+  @include size(100%, auto);
   display: flex;
   position: fixed;
   align-items: center;
