@@ -129,36 +129,6 @@ body {
   }
 }
 
-.navbar .side-nav .profile-image-div .profile-select {
-  background-color: rgba(0, 0, 0, 0.9);
-  opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  top: 110%;
-  right: 0%;
-  z-index: 100;
-  visibility: hidden;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.navbar .side-nav .profile-image-div .profile-select:after {
-  content: "";
-  position: absolute;
-  position: absolute;
-  bottom: 100%;
-  right: 20%;
-  border-width: 7px;
-  border-style: solid;
-  border-color: transparent transparent #fff transparent;
-}
-
 .header {
   position: absolute;
   margin-top: 0;
@@ -396,6 +366,48 @@ body {
   border-width: 7px;
   border-style: solid;
   border-color: transparent transparent #fff transparent;
+}
+
+.banner .banner-background .video-icons, .middle-video .middle-div .video-div .video .video-icons {
+  position: absolute;
+  bottom: 25%;
+  right: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner .banner-background .video-icons i, .middle-video .middle-div .video-div .video .video-icons i, .banner .banner-background .video-icons small, .middle-video .middle-div .video-div .video .video-icons small {
+  font-size: 1.1vw;
+  background: rgba(51, 51, 51, 0.4);
+  padding: 0.7vw;
+}
+
+.banner .banner-background .video-icons small, .middle-video .middle-div .video-div .video .video-icons small {
+  padding-right: 4.5vw;
+  border-left: 0.2vw solid #e5e5e5;
+}
+
+.banner .banner-background .video-icons i, .middle-video .middle-div .video-div .video .video-icons i {
+  font-size: 0.8vw;
+  padding: 0.5vw;
+  margin-right: 1vw;
+  border: 1px solid grey;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.banner .banner-background .video-icons i:hover, .middle-video .middle-div .video-div .video .video-icons i:hover {
+  border-color: #e5e5e5;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  font-size: 1.1vw;
+  padding: 0.6vw;
 }
 
 @keyframes slide {
@@ -1019,9 +1031,12 @@ body {
           animation: image 5s ease-in forwards;
 }
 
-.middle-video .middle-div .video-div video {
+.middle-video .middle-div .video-div .video {
   position: absolute;
   top: 0%;
+}
+
+.middle-video .middle-div .video-div .video video {
   opacity: 0;
   -webkit-animation: video 5s ease-in forwards;
           animation: video 5s ease-in forwards;

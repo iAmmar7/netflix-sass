@@ -1,5 +1,6 @@
 @import "_variable.scss";
 @import "_mixins.scss";
+@import "_placeholders.scss";
 @import "_animation.scss";
 
 /* NAVBAR 
@@ -234,6 +235,10 @@
     img, video {
       @include size(100%, auto);
     }
+    
+    .video-icons {
+      @extend %video-icons;
+    }
   }
 
   /* Feature Movie Div 
@@ -265,7 +270,6 @@
 ============================== */
 .middle-video {
   position: relative;
-  // margin-top: -4%;
   top: -10%;
   overflow: hidden;
 
@@ -293,10 +297,18 @@
       img {
         animation: image 5s ease-in forwards;
       }
-      video {
+
+      .video {
         @include position(0%, null, null, null);
-        opacity: 0;
-        animation: video 5s ease-in forwards;
+
+        video {
+          opacity: 0;
+          animation: video 5s ease-in forwards;
+        }
+        
+        .video-icons {
+          @extend %video-icons;
+        }
       }
     }
 
