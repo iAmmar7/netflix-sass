@@ -310,7 +310,7 @@
   .middle-div {
     @include size(100%, auto);
     @include position(0%, 0%, 0%, 0%);
-    margin: auto;
+    // margin: auto;
     margin-left: 4%;
     z-index: 10;
     display: flex;
@@ -322,22 +322,27 @@
         @include size(55vw, auto);
       }
       img {
+        // @include position(0%, 0%, 0%, 0%);
         animation: image 5s ease-in forwards;
       }
 
       .video {
+        position: relative;
         // @include position(0%, 0%, null, null);
+        // margin: auto;
+        // display:none;
+
         video {
-          @include position(0%, 0%, null, null);
+          @include position(null, 100%, null, null);
           margin: auto;
           opacity: 0;
           animation: video 5s ease-in forwards;
         }
-        
         .video-icons {
           @extend %video-icons;
-          @include position(0%, 0%, 0%, 45vw);
-          margin: auto;
+          // @include position(null, null, null, null);
+          margin-bottom: 10%;
+          animation: video 3s ease-in forwards;
         }
       }
     }

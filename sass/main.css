@@ -1092,7 +1092,6 @@ body {
   bottom: 0%;
   right: 0%;
   left: 0%;
-  margin: auto;
   margin-left: 4%;
   z-index: 10;
   display: -webkit-box;
@@ -1114,10 +1113,13 @@ body {
           animation: image 5s ease-in forwards;
 }
 
+.middle-video .middle-div .video-div .video {
+  position: relative;
+}
+
 .middle-video .middle-div .video-div .video video {
   position: absolute;
-  top: 0%;
-  bottom: 0%;
+  bottom: 100%;
   margin: auto;
   opacity: 0;
   -webkit-animation: video 5s ease-in forwards;
@@ -1125,12 +1127,9 @@ body {
 }
 
 .middle-video .middle-div .video-div .video .video-icons {
-  position: absolute;
-  top: 0%;
-  bottom: 0%;
-  right: 0%;
-  left: 45vw;
-  margin: auto;
+  margin-bottom: 10%;
+  -webkit-animation: video 3s ease-in forwards;
+          animation: video 3s ease-in forwards;
 }
 
 .middle-video .middle-div .video-detail {
