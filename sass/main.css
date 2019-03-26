@@ -404,6 +404,8 @@ body {
   border-color: transparent transparent #fff transparent;
 }
 
+/* Icons on Video
+============================= */
 .banner .banner-background .video-icons, .middle-video .middle-div .video-div .video .video-icons {
   position: absolute;
   bottom: 25%;
@@ -518,7 +520,7 @@ body {
 ============================== */
 .navbar {
   width: 100%;
-  height: auto;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -872,7 +874,7 @@ body {
   position: relative;
   overflow: hidden;
   margin-left: 4%;
-  margin-top: -10%;
+  top: -10vw;
   padding-bottom: 3%;
 }
 
@@ -952,6 +954,11 @@ body {
 
 /*  Netflix Original
 ============================== */
+.original {
+  position: relative;
+  top: -28vw;
+}
+
 .original h2 {
   text-transform: uppercase;
 }
@@ -976,29 +983,29 @@ body {
 
 /* Trending Now 
 ============================== */
-.trending, .recent, .horror {
+.horror, .recent {
   z-index: 10;
   position: relative;
   overflow: hidden;
   margin-left: 4%;
-  margin-top: -10%;
+  top: -10vw;
   padding-bottom: 3%;
-  margin-top: 0%;
+  top: -28vw;
 }
 
-.trending h2, .recent h2, .horror h2 {
+.horror h2, .recent h2 {
   font-size: 1.5vw;
   font-weight: 500;
   padding-bottom: 0.4em;
 }
 
-.trending .movie-div, .recent .movie-div, .horror .movie-div {
+.horror .movie-div, .recent .movie-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.trending .movie-div .left, .recent .movie-div .left, .horror .movie-div .left {
+.horror .movie-div .left, .recent .movie-div .left {
   width: 4vw;
   height: 10.2vw;
   position: absolute;
@@ -1015,27 +1022,27 @@ body {
   z-index: 10000;
 }
 
-.trending .movie-div .left i, .recent .movie-div .left i, .horror .movie-div .left i {
+.horror .movie-div .left i, .recent .movie-div .left i {
   font-size: 3vw;
   padding: 0 0.5vw;
   color: #fff;
 }
 
-.trending .movie-div .left:hover ~ .movie, .recent .movie-div .left:hover ~ .movie, .horror .movie-div .left:hover ~ .movie {
+.horror .movie-div .left:hover ~ .movie, .recent .movie-div .left:hover ~ .movie {
   position: relative;
   -webkit-animation: slide-left 0.5s forwards ease-in;
           animation: slide-left 0.5s forwards ease-in;
 }
 
-.trending .movie-div .right, .recent .movie-div .right, .horror .movie-div .right {
+.horror .movie-div .right, .recent .movie-div .right {
   left: 0;
 }
 
-.trending .movie-div:hover .left, .recent .movie-div:hover .left, .horror .movie-div:hover .left {
+.horror .movie-div:hover .left, .recent .movie-div:hover .left {
   visibility: visible;
 }
 
-.trending .movie-div .movie, .recent .movie-div .movie, .horror .movie-div .movie {
+.horror .movie-div .movie, .recent .movie-div .movie {
   cursor: pointer;
   margin-right: 0.2%;
   -webkit-transition: -webkit-transform 0.3s ease-in;
@@ -1044,17 +1051,17 @@ body {
   transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 
-.trending .movie-div .movie img, .recent .movie-div .movie img, .horror .movie-div .movie img {
+.horror .movie-div .movie img, .recent .movie-div .movie img {
   width: 18vw;
   height: auto;
 }
 
-.trending .movie-div .movie:hover, .recent .movie-div .movie:hover, .horror .movie-div .movie:hover {
+.horror .movie-div .movie:hover, .recent .movie-div .movie:hover {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
 }
 
-.trending .movie-div .movie:hover ~ .movie, .recent .movie-div .movie:hover ~ .movie, .horror .movie-div .movie:hover ~ .movie {
+.horror .movie-div .movie:hover ~ .movie, .recent .movie-div .movie:hover ~ .movie {
   position: relative;
   -webkit-animation: slide 0.3s forwards ease-in;
           animation: slide 0.3s forwards ease-in;
@@ -1064,7 +1071,7 @@ body {
 ============================== */
 .middle-video {
   position: relative;
-  top: -10%;
+  top: -20vw;
   overflow: hidden;
 }
 
@@ -1078,11 +1085,15 @@ body {
 }
 
 .middle-video .middle-div {
-  position: absolute;
-  top: 20%;
-  left: 4%;
   width: 100%;
   height: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  margin: auto;
+  margin-left: 4%;
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1103,15 +1114,23 @@ body {
           animation: image 5s ease-in forwards;
 }
 
-.middle-video .middle-div .video-div .video {
+.middle-video .middle-div .video-div .video video {
   position: absolute;
   top: 0%;
-}
-
-.middle-video .middle-div .video-div .video video {
+  bottom: 0%;
+  margin: auto;
   opacity: 0;
   -webkit-animation: video 5s ease-in forwards;
           animation: video 5s ease-in forwards;
+}
+
+.middle-video .middle-div .video-div .video .video-icons {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 45vw;
+  margin: auto;
 }
 
 .middle-video .middle-div .video-detail {
@@ -1200,6 +1219,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 6% 10%;
+  position: relative;
+  top: -28vw;
 }
 
 .footer .list {

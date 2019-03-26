@@ -6,7 +6,7 @@
 /* NAVBAR 
 ============================== */
 .navbar {
-  @include size(100%, auto);
+  @include size(100%, 60px);
   display: flex;
   position: fixed;
   align-items: center;
@@ -261,6 +261,8 @@
 /*  Netflix Original
 ============================== */
 .original {
+  position: relative;
+  top: -28vw;
   h2 {
     text-transform: uppercase;
   }
@@ -283,9 +285,9 @@
 
 /* Trending Now 
 ============================== */
-.trending, .recent, .horror {
+.horror, .recent {
   @include movies;
-  margin-top: 0%;
+  top: -28vw;
 }
 
 
@@ -293,7 +295,7 @@
 ============================== */
 .middle-video {
   position: relative;
-  top: -10%;
+  top: -20vw;
   overflow: hidden;
 
   .middle-background {
@@ -306,8 +308,10 @@
   }
 
   .middle-div {
-    @include position(20%, null, null, 4%);
     @include size(100%, auto);
+    @include position(0%, 0%, 0%, 0%);
+    margin: auto;
+    margin-left: 4%;
     z-index: 10;
     display: flex;
     align-items: center;
@@ -322,15 +326,18 @@
       }
 
       .video {
-        @include position(0%, null, null, null);
-
+        // @include position(0%, 0%, null, null);
         video {
+          @include position(0%, 0%, null, null);
+          margin: auto;
           opacity: 0;
           animation: video 5s ease-in forwards;
         }
         
         .video-icons {
           @extend %video-icons;
+          @include position(0%, 0%, 0%, 45vw);
+          margin: auto;
         }
       }
     }
@@ -364,6 +371,8 @@
   display: flex;
   flex-direction: column;
   margin: 6% 10%;
+  position: relative;
+  top: -28vw;
 
   .list {
     display: flex;
