@@ -3,16 +3,27 @@
     right: 0vw;
   }
   25% {
-    right: -1vw;
+    right: -0.6vw;
   }
   50% {
-    right: -2vw;
+    right: -1.6vw;
   }
   75% {
-    right: -3vw;
+    right: -2.6vw;
   }
   100% {
-    right: -4vw;
+    right: -3.6vw;
+  }
+}
+@keyframes slide-big {
+  0% {
+    right: 0vw;
+  }
+  50% {
+    right: -0.5vw;
+  }
+  100% {
+    right: -1vw;
   }
 }
 @keyframes slide-left {

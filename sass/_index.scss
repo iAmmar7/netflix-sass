@@ -258,9 +258,32 @@
   @include movies;
 }
 
+/*  Netflix Original
+============================== */
+.original {
+  h2 {
+    text-transform: uppercase;
+  }
+  .movie-div {
+    .left {
+      @include position(0%, 0%, null, null);
+      margin: auto;
+      margin-left: 0%;
+    }
+    .movie {
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:hover ~ .movie {
+        animation: slide-big 0.3s forwards ease-in;
+      }
+    }
+  }
+}
+
 /* Trending Now 
 ============================== */
-.trending, .recent {
+.trending, .recent, .horror {
   @include movies;
   margin-top: 0%;
 }

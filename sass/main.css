@@ -22,16 +22,16 @@ body {
     right: 0vw;
   }
   25% {
-    right: -1vw;
+    right: -0.6vw;
   }
   50% {
-    right: -2vw;
+    right: -1.6vw;
   }
   75% {
-    right: -3vw;
+    right: -2.6vw;
   }
   100% {
-    right: -4vw;
+    right: -3.6vw;
   }
 }
 
@@ -40,16 +40,40 @@ body {
     right: 0vw;
   }
   25% {
-    right: -1vw;
+    right: -0.6vw;
   }
   50% {
-    right: -2vw;
+    right: -1.6vw;
   }
   75% {
-    right: -3vw;
+    right: -2.6vw;
   }
   100% {
-    right: -4vw;
+    right: -3.6vw;
+  }
+}
+
+@-webkit-keyframes slide-big {
+  0% {
+    right: 0vw;
+  }
+  50% {
+    right: -0.5vw;
+  }
+  100% {
+    right: -1vw;
+  }
+}
+
+@keyframes slide-big {
+  0% {
+    right: 0vw;
+  }
+  50% {
+    right: -0.5vw;
+  }
+  100% {
+    right: -1vw;
   }
 }
 
@@ -287,16 +311,28 @@ body {
     right: 0vw;
   }
   25% {
-    right: -1vw;
+    right: -0.6vw;
   }
   50% {
-    right: -2vw;
+    right: -1.6vw;
   }
   75% {
-    right: -3vw;
+    right: -2.6vw;
   }
   100% {
-    right: -4vw;
+    right: -3.6vw;
+  }
+}
+
+@keyframes slide-big {
+  0% {
+    right: 0vw;
+  }
+  50% {
+    right: -0.5vw;
+  }
+  100% {
+    right: -1vw;
   }
 }
 
@@ -415,16 +451,28 @@ body {
     right: 0vw;
   }
   25% {
-    right: -1vw;
+    right: -0.6vw;
   }
   50% {
-    right: -2vw;
+    right: -1.6vw;
   }
   75% {
-    right: -3vw;
+    right: -2.6vw;
   }
   100% {
-    right: -4vw;
+    right: -3.6vw;
+  }
+}
+
+@keyframes slide-big {
+  0% {
+    right: 0vw;
+  }
+  50% {
+    right: -0.5vw;
+  }
+  100% {
+    right: -1vw;
   }
 }
 
@@ -902,9 +950,33 @@ body {
           animation: slide 0.3s forwards ease-in;
 }
 
+/*  Netflix Original
+============================== */
+.original h2 {
+  text-transform: uppercase;
+}
+
+.original .movie-div .left {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  margin: auto;
+  margin-left: 0%;
+}
+
+.original .movie-div .movie:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.original .movie-div .movie:hover ~ .movie {
+  -webkit-animation: slide-big 0.3s forwards ease-in;
+          animation: slide-big 0.3s forwards ease-in;
+}
+
 /* Trending Now 
 ============================== */
-.trending, .recent {
+.trending, .recent, .horror {
   z-index: 10;
   position: relative;
   overflow: hidden;
@@ -914,19 +986,19 @@ body {
   margin-top: 0%;
 }
 
-.trending h2, .recent h2 {
+.trending h2, .recent h2, .horror h2 {
   font-size: 1.5vw;
   font-weight: 500;
   padding-bottom: 0.4em;
 }
 
-.trending .movie-div, .recent .movie-div {
+.trending .movie-div, .recent .movie-div, .horror .movie-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.trending .movie-div .left, .recent .movie-div .left {
+.trending .movie-div .left, .recent .movie-div .left, .horror .movie-div .left {
   width: 4vw;
   height: 10.2vw;
   position: absolute;
@@ -943,27 +1015,27 @@ body {
   z-index: 10000;
 }
 
-.trending .movie-div .left i, .recent .movie-div .left i {
+.trending .movie-div .left i, .recent .movie-div .left i, .horror .movie-div .left i {
   font-size: 3vw;
   padding: 0 0.5vw;
   color: #fff;
 }
 
-.trending .movie-div .left:hover ~ .movie, .recent .movie-div .left:hover ~ .movie {
+.trending .movie-div .left:hover ~ .movie, .recent .movie-div .left:hover ~ .movie, .horror .movie-div .left:hover ~ .movie {
   position: relative;
   -webkit-animation: slide-left 0.5s forwards ease-in;
           animation: slide-left 0.5s forwards ease-in;
 }
 
-.trending .movie-div .right, .recent .movie-div .right {
+.trending .movie-div .right, .recent .movie-div .right, .horror .movie-div .right {
   left: 0;
 }
 
-.trending .movie-div:hover .left, .recent .movie-div:hover .left {
+.trending .movie-div:hover .left, .recent .movie-div:hover .left, .horror .movie-div:hover .left {
   visibility: visible;
 }
 
-.trending .movie-div .movie, .recent .movie-div .movie {
+.trending .movie-div .movie, .recent .movie-div .movie, .horror .movie-div .movie {
   cursor: pointer;
   margin-right: 0.2%;
   -webkit-transition: -webkit-transform 0.3s ease-in;
@@ -972,17 +1044,17 @@ body {
   transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 
-.trending .movie-div .movie img, .recent .movie-div .movie img {
+.trending .movie-div .movie img, .recent .movie-div .movie img, .horror .movie-div .movie img {
   width: 18vw;
   height: auto;
 }
 
-.trending .movie-div .movie:hover, .recent .movie-div .movie:hover {
+.trending .movie-div .movie:hover, .recent .movie-div .movie:hover, .horror .movie-div .movie:hover {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
 }
 
-.trending .movie-div .movie:hover ~ .movie, .recent .movie-div .movie:hover ~ .movie {
+.trending .movie-div .movie:hover ~ .movie, .recent .movie-div .movie:hover ~ .movie, .horror .movie-div .movie:hover ~ .movie {
   position: relative;
   -webkit-animation: slide 0.3s forwards ease-in;
           animation: slide 0.3s forwards ease-in;
