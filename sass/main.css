@@ -58,16 +58,16 @@ body {
     left: 0vw;
   }
   25% {
-    left: -5vw;
+    left: -9vw;
   }
   50% {
-    left: -10vw;
+    left: -18vw;
   }
   75% {
-    left: -15vw;
+    left: -27vw;
   }
   100% {
-    left: -20vw;
+    left: -36vw;
   }
 }
 
@@ -76,16 +76,16 @@ body {
     left: 0vw;
   }
   25% {
-    left: -5vw;
+    left: -9vw;
   }
   50% {
-    left: -10vw;
+    left: -18vw;
   }
   75% {
-    left: -15vw;
+    left: -27vw;
   }
   100% {
-    left: -20vw;
+    left: -36vw;
   }
 }
 
@@ -305,16 +305,16 @@ body {
     left: 0vw;
   }
   25% {
-    left: -5vw;
+    left: -9vw;
   }
   50% {
-    left: -10vw;
+    left: -18vw;
   }
   75% {
-    left: -15vw;
+    left: -27vw;
   }
   100% {
-    left: -20vw;
+    left: -36vw;
   }
 }
 
@@ -433,16 +433,16 @@ body {
     left: 0vw;
   }
   25% {
-    left: -5vw;
+    left: -9vw;
   }
   50% {
-    left: -10vw;
+    left: -18vw;
   }
   75% {
-    left: -15vw;
+    left: -27vw;
   }
   100% {
-    left: -20vw;
+    left: -36vw;
   }
 }
 
@@ -842,7 +842,7 @@ body {
 
 .movies .movie-div .left {
   width: 4vw;
-  height: 11.3vw;
+  height: 10.2vw;
   position: absolute;
   right: 0;
   display: -webkit-box;
@@ -887,7 +887,7 @@ body {
 }
 
 .movies .movie-div .movie img {
-  width: 20vw;
+  width: 18vw;
   height: auto;
 }
 
@@ -928,7 +928,7 @@ body {
 
 .trending .movie-div .left, .recent .movie-div .left {
   width: 4vw;
-  height: 11.3vw;
+  height: 10.2vw;
   position: absolute;
   right: 0;
   display: -webkit-box;
@@ -973,7 +973,7 @@ body {
 }
 
 .trending .movie-div .movie img, .recent .movie-div .movie img {
-  width: 20vw;
+  width: 18vw;
   height: auto;
 }
 

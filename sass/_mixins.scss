@@ -42,7 +42,7 @@
     display: flex;
 
     .left {
-      @include size(4vw, 11.3vw);
+      @include size(4vw, 10.2vw);
       @include position(null, null, 0, null);
       display: flex;
       align-items: center;
@@ -79,7 +79,7 @@
       transition: transform 0.3s ease-in;
       
       img {
-        @include size(20vw, auto);
+        @include size(18vw, auto);
       }
 
       &:hover {
