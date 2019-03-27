@@ -1,31 +1,29 @@
 @keyframes slide {
   0% {
-    right: 0vw;
+    width: 21vw;
   }
   25% {
-    right: -0.6vw;
+    width: 22vw;
   }
   50% {
-    right: -1.6vw;
+    width: 23vw;
   }
   75% {
-    right: -2.6vw;
+    width: 24vw;
   }
   100% {
-    right: -3.6vw;
+    width: 25vw;
   }
 }
 @keyframes slide-big {
   0% {
-    right: 0vw;
-  }
-  50% {
-    right: -0.5vw;
+    width: 19vw;
   }
   100% {
-    right: -1vw;
+    width: 20vw;
   }
 }
+
 @keyframes slide-left {
   0% {
     left: 0vw;

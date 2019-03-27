@@ -19,61 +19,55 @@ body {
 
 @-webkit-keyframes slide {
   0% {
-    right: 0vw;
+    width: 21vw;
   }
   25% {
-    right: -0.6vw;
+    width: 22vw;
   }
   50% {
-    right: -1.6vw;
+    width: 23vw;
   }
   75% {
-    right: -2.6vw;
+    width: 24vw;
   }
   100% {
-    right: -3.6vw;
+    width: 25vw;
   }
 }
 
 @keyframes slide {
   0% {
-    right: 0vw;
+    width: 21vw;
   }
   25% {
-    right: -0.6vw;
+    width: 22vw;
   }
   50% {
-    right: -1.6vw;
+    width: 23vw;
   }
   75% {
-    right: -2.6vw;
+    width: 24vw;
   }
   100% {
-    right: -3.6vw;
+    width: 25vw;
   }
 }
 
 @-webkit-keyframes slide-big {
   0% {
-    right: 0vw;
-  }
-  50% {
-    right: -0.5vw;
+    width: 19vw;
   }
   100% {
-    right: -1vw;
+    width: 20vw;
   }
 }
 
 @keyframes slide-big {
   0% {
-    right: 0vw;
-  }
-  50% {
-    right: -0.5vw;
+    width: 19vw;
   }
   100% {
-    right: -1vw;
+    width: 20vw;
   }
 }
 
@@ -308,31 +302,28 @@ body {
 
 @keyframes slide {
   0% {
-    right: 0vw;
+    width: 21vw;
   }
   25% {
-    right: -0.6vw;
+    width: 22vw;
   }
   50% {
-    right: -1.6vw;
+    width: 23vw;
   }
   75% {
-    right: -2.6vw;
+    width: 24vw;
   }
   100% {
-    right: -3.6vw;
+    width: 25vw;
   }
 }
 
 @keyframes slide-big {
   0% {
-    right: 0vw;
-  }
-  50% {
-    right: -0.5vw;
+    width: 19vw;
   }
   100% {
-    right: -1vw;
+    width: 20vw;
   }
 }
 
@@ -450,31 +441,28 @@ body {
 
 @keyframes slide {
   0% {
-    right: 0vw;
+    width: 21vw;
   }
   25% {
-    right: -0.6vw;
+    width: 22vw;
   }
   50% {
-    right: -1.6vw;
+    width: 23vw;
   }
   75% {
-    right: -2.6vw;
+    width: 24vw;
   }
   100% {
-    right: -3.6vw;
+    width: 25vw;
   }
 }
 
 @keyframes slide-big {
   0% {
-    right: 0vw;
-  }
-  50% {
-    right: -0.5vw;
+    width: 19vw;
   }
   100% {
-    right: -1vw;
+    width: 20vw;
   }
 }
 
@@ -885,6 +873,7 @@ body {
 }
 
 .movies .movie-div {
+  height: 10vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -894,7 +883,7 @@ body {
   width: 4vw;
   height: 10.2vw;
   position: absolute;
-  right: 0;
+  right: 0%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -904,7 +893,7 @@ body {
   background: rgba(0, 0, 0, 0.5);
   visibility: hidden;
   overflow: visible;
-  z-index: 10000;
+  z-index: 10;
 }
 
 .movies .movie-div .left i {
@@ -941,13 +930,14 @@ body {
   height: auto;
 }
 
-.movies .movie-div .movie:hover {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+.movies .movie-div .movie:hover img {
+  width: 25vw;
+  height: auto;
+  position: relative;
+  bottom: 30px;
 }
 
-.movies .movie-div .movie:hover ~ .movie {
-  position: relative;
+.movies .movie-div .movie:hover img:hover {
   -webkit-animation: slide 0.3s forwards ease-in;
           animation: slide 0.3s forwards ease-in;
 }
@@ -963,6 +953,10 @@ body {
   text-transform: uppercase;
 }
 
+.original .movie-div {
+  height: 36vw;
+}
+
 .original .movie-div .left {
   position: absolute;
   top: 0%;
@@ -971,18 +965,22 @@ body {
   margin-left: 0%;
 }
 
-.original .movie-div .movie:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.original .movie-div .movie:hover img {
+  width: 20vw;
+  height: auto;
 }
 
-.original .movie-div .movie:hover ~ .movie {
+.original .movie-div .movie:hover img:hover {
   -webkit-animation: slide-big 0.3s forwards ease-in;
           animation: slide-big 0.3s forwards ease-in;
 }
 
 /* Trending Now 
 ============================== */
+.trending {
+  z-index: 100;
+}
+
 .horror, .recent {
   z-index: 10;
   position: relative;
@@ -1000,6 +998,7 @@ body {
 }
 
 .horror .movie-div, .recent .movie-div {
+  height: 10vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1009,7 +1008,7 @@ body {
   width: 4vw;
   height: 10.2vw;
   position: absolute;
-  right: 0;
+  right: 0%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1019,7 +1018,7 @@ body {
   background: rgba(0, 0, 0, 0.5);
   visibility: hidden;
   overflow: visible;
-  z-index: 10000;
+  z-index: 10;
 }
 
 .horror .movie-div .left i, .recent .movie-div .left i {
@@ -1056,13 +1055,14 @@ body {
   height: auto;
 }
 
-.horror .movie-div .movie:hover, .recent .movie-div .movie:hover {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+.horror .movie-div .movie:hover img, .recent .movie-div .movie:hover img {
+  width: 25vw;
+  height: auto;
+  position: relative;
+  bottom: 30px;
 }
 
-.horror .movie-div .movie:hover ~ .movie, .recent .movie-div .movie:hover ~ .movie {
-  position: relative;
+.horror .movie-div .movie:hover img:hover, .recent .movie-div .movie:hover img:hover {
   -webkit-animation: slide 0.3s forwards ease-in;
           animation: slide 0.3s forwards ease-in;
 }

@@ -39,17 +39,19 @@
     padding-bottom: 0.4em;
   }
   .movie-div {
+    height: 10vw;
     display: flex;
 
     .left {
       @include size(4vw, 10.2vw);
-      @include position(null, null, 0, null);
+      @include position(null, null, 0%, null);
       display: flex;
       align-items: center;
       background: rgba(0,0,0,.5);
       visibility: hidden;
       overflow: visible;
-      z-index: 10000;
+      // z-index: 10000;
+      z-index: 10;
 
       i {
         font-size: 3vw;
@@ -83,13 +85,22 @@
       }
 
       &:hover {
-        transform: scale(1.4);
+        // transform: scale(1.4);
+        img {
+          @include size(25vw, auto);
+          position: relative;
+          bottom: 30px;
+
+          &:hover {
+            animation: slide 0.3s forwards ease-in;
+          }
+        }
       }
 
-      &:hover ~ .movie {
-        position: relative;
-        animation: slide 0.3s forwards ease-in;
-      }
+      // &:hover ~ .movie {
+      //   position: relative;
+      //   // animation: slide 0.3s forwards ease-in;
+      // }
     }
   }
 }

@@ -267,6 +267,7 @@
     text-transform: uppercase;
   }
   .movie-div {
+    height: 36vw;
     .left {
       @include position(0%, 0%, null, null);
       margin: auto;
@@ -274,10 +275,13 @@
     }
     .movie {
       &:hover {
-        transform: scale(1.1);
-      }
-      &:hover ~ .movie {
-        animation: slide-big 0.3s forwards ease-in;
+        img {
+          @include size(20vw, auto);
+
+          &:hover {
+            animation: slide-big 0.3s forwards ease-in;
+          }
+        }
       }
     }
   }
@@ -285,6 +289,10 @@
 
 /* Trending Now 
 ============================== */
+
+.trending {
+  z-index: 100;
+}
 .horror, .recent {
   @include movies;
   top: -28vw;
