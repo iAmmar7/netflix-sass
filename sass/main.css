@@ -238,37 +238,58 @@ body {
   cursor: pointer;
 }
 
-.container .profiles .img-div:hover > img {
+.container .profiles .img-div:hover > a > img {
   border-color: white;
 }
 
-.container .profiles .img-div:hover > small {
+.container .profiles .img-div:hover > a > small {
   color: white;
 }
 
-.container .profiles .img-div img {
-  width: 10vw;
-  height: 10vw;
+.container .profiles .img-div a {
+  width: auto;
+  height: auto;
+  max-width: 250px;
+  max-height: 250px;
+  min-width: 100px;
+  min-height: 100px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 0;
+}
+
+.container .profiles .img-div a img {
+  width: 10.1vw;
+  height: 10.1vw;
   max-width: 200px;
   max-height: 200px;
   min-width: 84px;
   min-height: 84px;
-  margin-bottom: 10px;
   background-repeat: no-repeat;
   background-size: cover;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  border: 0.2em solid #1a1a1a;
+  border: 0.286em solid #1a1a1a;
+  margin-bottom: 10px;
 }
 
-.container .profiles .img-div small {
+.container .profiles .img-div a small {
+  border: none;
   color: grey;
   font-size: 100%;
 }
 
 @media screen and (max-width: 600px) {
-  .container .profiles .img-div small {
+  .container .profiles .img-div a small {
     font-size: 80%;
   }
 }

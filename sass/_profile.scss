@@ -58,29 +58,39 @@
       margin: 0 1vw 10% 1vw;
       cursor: pointer;
 
-      &:hover > img {
+      &:hover > a > img {
         border-color: white;
-      }
-      
-      &:hover > small {
+      }     
+      &:hover > a > small {
         color: white;
       }
 
-      img {
-        @include size(10vw, 10vw, 200px, 84px);
-        margin-bottom: 10px;
-        background-repeat: no-repeat;
-        background-size: cover;
+      a {
+        @include size(auto, auto, 250px, 100px);
+
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         align-self: center;
-        border: 0.2em solid $img-border;
-      }
+        padding: 0;
 
-      small {
-        color: grey;
-        font-size: 100%;
+        img {
+          @include size(10.1vw, 10.1vw, 200px, 84px);
+          background-repeat: no-repeat;
+          background-size: cover;
+          border: 0.286em solid $img-border;
+          margin-bottom: 10px;
+        }
 
-        @media screen and (max-width: 600px) {
-          font-size: 80%;
+        small {
+          border: none;
+          color: grey;
+          font-size: 100%;
+  
+          @media screen and (max-width: 600px) {
+            font-size: 80%;
+          }
         }
       }
     }
