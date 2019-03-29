@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-family: "Rubik", Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -882,7 +882,6 @@ body {
   z-index: 10;
   position: relative;
   overflow: hidden;
-  margin-left: 4%;
   top: -10vw;
   padding-bottom: 3%;
 }
@@ -891,6 +890,7 @@ body {
   font-size: 1.5vw;
   font-weight: 500;
   padding-bottom: 0.4em;
+  margin-left: 4%;
 }
 
 .movies .movie-div {
@@ -898,6 +898,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 4%;
 }
 
 .movies .movie-div .left {
@@ -1006,7 +1007,6 @@ body {
   z-index: 10;
   position: relative;
   overflow: hidden;
-  margin-left: 4%;
   top: -10vw;
   padding-bottom: 3%;
   top: -28vw;
@@ -1016,6 +1016,7 @@ body {
   font-size: 1.5vw;
   font-weight: 500;
   padding-bottom: 0.4em;
+  margin-left: 4%;
 }
 
 .horror .movie-div, .recent .movie-div {
@@ -1023,6 +1024,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 4%;
 }
 
 .horror .movie-div .left, .recent .movie-div .left {

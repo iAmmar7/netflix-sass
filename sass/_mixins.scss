@@ -29,7 +29,6 @@
   z-index: 10;
   position: relative;
   overflow: hidden;
-  margin-left: 4%;
   top: -10vw;
   padding-bottom: 3%;
 
@@ -37,11 +36,13 @@
     font-size: 1.5vw;
     font-weight: 500;
     padding-bottom: 0.4em;
+    margin-left: 4%;
   }
   .movie-div {
     height: 10vw;
     display: flex;
-
+    margin-left: 4%;
+    
     .left {
       @include size(4vw, 10.2vw);
       @include position(null, null, 0%, null);
